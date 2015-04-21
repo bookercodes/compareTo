@@ -10,15 +10,19 @@ CompareTo is a custom [`<input>`](https://developer.mozilla.org/en-US/docs/Web/H
 </form>
 ```
 
+
+You can see a **live demo** [here](https://alexbooker.github.io/compareTo/).
+
 ![](https://i.imgur.com/sZyT8ET.png)
 
 ## Installation
 
 When it comes to installing compareTo, you have a few options:
 
-1. Download `compareTo.js` and reference it from your html.
-2. Copy and paste the relevant content from `compareTo.js` into your own script.
-3. Reference the file here on GitHub.
+1. Download [`compareTo.js`](https://github.com/alexbooker/compareTo/blob/master/compareTo.js) and reference it from your html.
+2. Copy and paste the relevant content from [`compareTo.js`](https://github.com/alexbooker/compareTo/blob/master/compareTo.js) into your own script.
+3. Reference the ["raw" file](https://raw.githubusercontent.com/alexbooker/compareTo/master/compareTo.js) here on GitHub (e.g. `<script src="https://raw.githubusercontent.com/alexbooker/compareTo/master/compareTo.js"></script>`).
+
 
 ##Development
 
