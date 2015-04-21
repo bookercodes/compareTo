@@ -4,7 +4,7 @@ $(function() {
   var password = $("input[name=" + comparateName + "]");
 
   function validatePassword() {
-    if (confirm_password.val() != password.val()) {
+    if (confirm_password.val() !== password.val()) {
       confirm_password.get(0).setCustomValidity("These passwords don't match.");
     } else {
       confirm_password.get(0).setCustomValidity('');
