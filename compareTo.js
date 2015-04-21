@@ -11,11 +11,7 @@ $(function() {
     }
   }
 
-  confirm_password.on("change", function() {
-    validatePassword();
-  });
-  password.on("change", function() {
-    validatePassword();
-  });
+  confirm_password.on("change", validatePassword)
+  password.on("change", validatePassword);
 
 });
