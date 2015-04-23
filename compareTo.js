@@ -27,8 +27,8 @@
     var comparate = comparates[0];
 
     var error = 'These passwords don\'t match.';
-    if (input.hasAttribute('compareToMsg')) {
-      error = input.getAttribute('compareToMsg');
+    if (input.hasAttribute('compareToError')) {
+      error = input.getAttribute('compareToError');
     }
 
     input.addEventListener("change", (function(input, comparate, invalidmsg) {
