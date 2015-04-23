@@ -1,3 +1,5 @@
+![](https://img.shields.io/github/license/mashape/apistatus.svg)
+
 #CompareTo
 
 compareTo is a custom html5 data attribute that compares two password fields with one another. 
