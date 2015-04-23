@@ -15,10 +15,10 @@
     var comparateName = input.getAttribute('compareTo');
     var comparates = document.getElementsByName(comparateName);
     if (comparates.length === 0) { 
-        console.log('Error:  The element named by the compareTo attribute, "'.concat(comparateName ,'" ,could not be found!'));  
+        console.error('CompareTo could not find an element with the name "' + comparateName + '". Please ensure that one element with that name exists.');  
         continue; 
      } else if (comparates.length > 1) {
-        console.log('Error:  More than one('.concat(comparates.length ,') element referenced by the compareTo attribute were found, compareTo element could not be used.'));
+        console.error('CompareTo found more than one (' + comparates.length  + ') elements with the name "' + comparateName + '". Please ensure that only one element with that name exists.')
         continue;
      }
     var comparate = comparates[0];
