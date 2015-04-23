@@ -1,49 +1,33 @@
 (function() {
 
-	function validatePassword(target, validator) {  
-		if( validator.value !== target.value ) {
-			validator.setCustomValidity("These passwords don't match.");
-		} else {
-			validator.setCustomValidity('');
-		}
+  function comparePasswords(password, comparate) {
+    if (password.value !== comparate.value) {
+      password.setCustomValidity('These passwords don\'t match.');
+    } else {
+      password.setCustomValidity('');
+    }
+  }
 
-	}
+  var inputs = document.getElementsByTagName('input');
+  for (var i = 0; i < inputs.length; i++) {
+    var input = inputs[i];
+    if (!input.hasAttribute('compareTo')) continue;
+    var comparateName = input.getAttribute('compareTo');
+    var comparates = document.getElementsByName(comparateName);
+    if (comparates.length !== 1) continue;
+    var comparate = comparates[0];
 
+    input.addEventListener("change", (function(input, comparate) {
+      return function() {
+        comparePasswords(input, comparate);
+      }
+    })(input, comparate));
 
-	function setCompareTo() {  //sets up all elements of compareTo
-		var allInputs = document.getElementsByTagName('input');
-		for( var i=0; i<allInputs.length; i++ ) {
-
-			if ( allInputs[i].hasAttribute('compareTo') ) {
-				var targetname = allInputs[i].getAttribute('compareTo');
-				var target = document.getElementsByName(targetname);
-
-				if( target.length === 1 ) {  //make sure we reference exactly one element
-					allInputs[i].addEventListener("change", (function(target, validator) {  //closure loop
-							return function(){
-								validatePassword(target, validator);
-							};
-						})(target[0], allInputs[i])
-					);
-
-					target[0].addEventListener("change", (function(target, validator) {  //closure loop
-							return function(){
-								validatePassword(target, validator);
-							};
-						})(target[0], allInputs[i])
-					);
-					
-
-				}
-
-			}
-		
-
-		}
-	}
-
-
-
-	setCompareTo();  //search for compareTo inputs and activate them
+    comparate.addEventListener("change", (function(input, comparate) {
+      return function() {
+        comparePasswords(input, comparate);
+      }
+    })(input, comparate));
+  }
 
 }());
