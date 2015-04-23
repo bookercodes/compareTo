@@ -14,7 +14,13 @@
     if (!input.hasAttribute('compareTo')) continue;
     var comparateName = input.getAttribute('compareTo');
     var comparates = document.getElementsByName(comparateName);
-    if (comparates.length !== 1) continue;
+    if (comparates.length === 0) { 
+        console.log('Error:  The element named by the compareTo attribute, "'.concat(comparateName ,'" ,could not be found!'));  
+        continue; 
+     } else if (comparates.length > 1) {
+        console.log('Error:  More than one('.concat(comparates.length ,') element referenced by the compareTo attribute were found, compareTo element could not be used.'));
+        continue;
+     }
     var comparate = comparates[0];
 
     var defaultValidateError = 'These passwords don\'t match.';  //default validation error message
