@@ -22,9 +22,9 @@ You can see a live demo [here] (https://alexbooker.github.io/compareTo/).
 
 When it comes to installing compareTo, you have a few options:
 
-1. Download [`compareTo.js`](https://raw.githubusercontent.com/alexbooker/compareTo/master/compareTo.js) and reference it from your html.
-2. Copy [`compareTo.js`](https://raw.githubusercontent.com/alexbooker/compareTo/master/compareTo.js) into your own script.
-3. Reference the GitHub CDN: https://cdn.rawgit.com/alexbooker/compareTo/master/compareTo.js
+1. Download [`compareTo.min.js`](https://raw.githubusercontent.com/alexbooker/compareTo/master/compareTo.min.js) and reference it from your html.
+2. Copy [`compareTo.min.js`](https://raw.githubusercontent.com/alexbooker/compareTo/master/compareTo.min.js) into your own script.
+3. Reference the GitHub CDN: https://cdn.rawgit.com/alexbooker/compareTo/master/compareTo.min.js
 
 
 ##Development
