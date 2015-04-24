@@ -45,3 +45,9 @@ Common problems will manifest in the developer console:
 ![](http://i.imgur.com/zJkLOJ1.png)
 
 Still having trouble? Open an [issue](https://github.com/alexbooker/compareTo/issues) and someone will get back to you shortly :smile:.
+
+
+##Install
+
+Gulp is used to output the minified file. To install the required modules, simply run `npm install`.
+Then `gulp` will do the relevant stuff.

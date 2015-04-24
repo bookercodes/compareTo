@@ -1,0 +1,21 @@
+{
+  "name": "compareTo",
+  "version": "1.0.0",
+  "description": "compareTo is a custom html5 element attribute that compares two passwords",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zhouzi/compareTo.git"
+  },
+  "author": "Alex Booker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zhouzi/compareTo/issues"
+  },
+  "homepage": "https://github.com/Zhouzi/compareTo",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}

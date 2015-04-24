@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+    <style>
+      form { margin: 10px 0; }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="compare_password" placeholder="Confirm Password" compareTo="password" required>
+      <input type="submit" class="submit">
+    </form>
+
+    <form>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="compare_password" placeholder="Confirm Password" data-compareTo="password" required>
+      <input type="submit" class="submit">
+    </form>
+
+    <script src="compareTo.min.js"></script>
+  </body>
+</html>
