@@ -1,8 +1,17 @@
-![](https://img.shields.io/github/license/mashape/apistatus.svg)
+![](http://i.imgur.com/fEQnsP4.png)
 
-#CompareTo
+CompareTo is a custom HTML5 attribute that compares two passwords with one another. If the passwords are not the same, a native error will be shown to the user:
 
-compareTo is a custom html5 data attribute that compares two password fields with one another. 
+![](http://i.imgur.com/TFQlHd0.png)
+
+You can see the demo [here](https://alexbooker.github.io/compareTo/).
+
+##Installation
+
+1. Download the [minified script](https://raw.githubusercontent.com/alexbooker/compareTo/master/compareTo.min.js) and reference it from your document; or,
+2. Reference the online [minified script](https://cdn.rawgit.com/alexbooker/compareTo/master/compareTo.min.js) from your document. See the [demo code](https://github.com/alexbooker/compareTo/blob/gh-pages/index.html) if you need to.
+
+##Usage
 
 ```html
 <form action="register" method="post">
@@ -12,21 +21,27 @@ compareTo is a custom html5 data attribute that compares two password fields wit
 </form>
 ```
 
-If the passwords do not match, a native error will be shown to the user:
+##Custom validity error message
 
-![](https://i.imgur.com/O2S8q1e.png)
+```html
+<form action="register" method="post">
+  <input type="text" name="username" required>
+  <input type="password" name="password" required>
+  <input type="password" name="compare_password" compareTo="password" required>
+  <input type="email" name="email" required>
+  <input 
+    type="email" 
+    name="compare_email" 
+    compareTo="email" 
+    compareToError="emails do not match" 
+    required>
+</form>
+```
 
-You can see a live demo [here] (https://alexbooker.github.io/compareTo/).
+##Support
 
-## Installation
+Common problems will manifest in the developer console: 
 
-When it comes to installing compareTo, you have a few options:
+![](http://i.imgur.com/zJkLOJ1.png)
 
-1. Download [`compareTo.min.js`](https://raw.githubusercontent.com/alexbooker/compareTo/master/compareTo.min.js) and reference it from your html.
-2. Copy [`compareTo.min.js`](https://raw.githubusercontent.com/alexbooker/compareTo/master/compareTo.min.js) into your own script.
-3. Reference the GitHub CDN: https://cdn.rawgit.com/alexbooker/compareTo/master/compareTo.min.js
-
-
-##Development
-
-At the moment, compareTo is **very** simple. Moving forward, I would like to drop dependency on jQuery. I would also like to handle more complicated scenarios. At the moment, I am merely gauging intrest. If you want to get involved, please feel free to claim an [issue](https://github.com/alexbooker/compareTo/issues)!
+Still having trouble? Open an [issue](https://github.com/alexbooker/compareTo/issues) and someone will get back to you shortly :smile:.
