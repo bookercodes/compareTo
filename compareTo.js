@@ -16,9 +16,9 @@
     }
     var comparateName = input.getAttribute('compareTo');
     var comparates = document.getElementsByName(comparateName);
-    if (comparates.length === 0) { 
-      console.error('CompareTo could not find an element with the name "' + comparateName + '". Please ensure that one element with that name exists.');  
-      continue; 
+    if (comparates.length === 0) {
+      console.error('CompareTo could not find an element with the name "' + comparateName + '". Please ensure that one element with that name exists.');
+      continue;
     }
     if (comparates.length > 1) {
       console.error('CompareTo found more than one (' + comparates.length  + ') elements with the name "' + comparateName + '". Please ensure that only one element with that name exists.')
