@@ -9,11 +9,12 @@
     }
   }
 
-  var inputs = document.querySelectorAll('input[compareTo]').concat(document.querySelectorAll('input[data-compareTo]'));
+  var inputs = document.querySelectorAll('input[compareTo], input[data-compareTo]');
 
   for (var i = 0, input; input = inputs[i]; i++) {
+    var form = input.form;
     var comparateName = input.getAttribute('compareTo') || input.getAttribute('data-compareTo');
-    var comparates = document.getElementsByName(comparateName);
+    var comparates = form.querySelectorAll('[name="' + comparateName + '"]');
 
     if (comparates.length === 0) {
       console.error('CompareTo could not find an element with the name "' + comparateName + '". Please ensure that one element with that name exists.');
