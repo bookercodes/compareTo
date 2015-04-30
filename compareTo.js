@@ -13,7 +13,10 @@
 
   for (var i = 0, input; input = inputs[i]; i++) {
     var form = input.form;
-    var comparateName = input.getAttribute('compareTo') || input.getAttribute('data-compareTo');
+    var comparateName = input.getAttribute('compareTo')       || 
+                        input.getAttribute('data-compareTo')  || 
+                        input.getAttribute('compare-to')      || 
+                        input.getAttribute('data-compare-to');
     var comparates = form.querySelectorAll('[name="' + comparateName + '"]');
 
     if (comparates.length === 0) {
@@ -27,8 +30,10 @@
     }
 
     var comparate = comparates[0];
-    var error = input.getAttribute('compareToError')      ||
-                input.getAttribute('data-compareToError') ||
+    var error = input.getAttribute('compareToError')        ||
+                input.getAttribute('data-compareToError')   ||
+                input.getAttribute('compare-to-error')      ||
+                input.getAttribute('data-compare-to-error') ||
                 'These passwords don\'t match.';
 
     var callback = (function(input, comparate, invalidmsg) {
